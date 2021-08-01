@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="vendor\bootstrap\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer/header-footer.css"> 
+    <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.14.3/tagify.min.css" integrity="sha512-X5fWtpYG9gzu0ACyXMuZ1gRu2akvZAYUReB0R/+GENYgfupzS1igi+dqcs8ASA0USe+LuxE9HP5KSQn1hjRpfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css\tagify.css">
+    <link rel="stylesheet" href="vendor\kamadatepicker\kamadatepicker.min.css">
     <link rel="stylesheet" type="text/css" href="css\login\main.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="vendor\select2\select2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
     <title>login</title>
 </head>
 <body>
@@ -103,44 +110,110 @@
       
           <!-- Icon -->
           <div class="fadeIn first login-title">
-            ورود 
+            اطلاعات تکمیلی 
           </div>
       
           <!-- Login Form -->
           <form>
+            <div class="row" dir="rtl">
+              <div class="col-md-6">
               <div style="position: relative;" class="fadeIn second">
-            <input type="text" class="blur" id="mobile"  name="mobile" value="09">
-            <label class="floating-label ">تلفن همراه</label>
+            <input type="text" class="blur-name-family" id="name-family"  name="name-family">
+            <label class="floating-label ">نام و نام خانوادگی</label>
             <div class="forcible">*</div>
         </div>
         <div style="position: relative;" class="fadeIn third">
-            <input type="password" id="password" class="blur" name="login" >
-            <label class="floating-label">رمز عبور</label>
+            <input type="text" id="mobile" class="blur-mobile" name="mobile" value="09" >
+            <label class="floating-label-mobile">تلفن همراه</label>
             <div class="forcible">*</div>
         </div>
-        <div>
-            <input type="submit" class="fadeIn fourth buttonLoc" value="ورود">
+        <div style="position: relative;" class="fadeIn third">
+          <input type="text" id="email" class="blur-email" name="email" >
+          <label class="floating-label-email">ایمیل</label>
+          <div class="forcible">*</div>
+       
+      </div>
+      <div style="position: relative;" class="fadeIn third ">
+        <input type="password" id="password" class="blur-password" name="login" >
+        <label class="floating-label-password">رمز عبور</label>
+        <div class="forcible">*</div>
+    </div>
+
+      </div>
+      <div class="col-md-6">
+        <div style="position: relative;" class="fadeIn second div-state">
+          <div class="floating-label-state">استان</div>
+    <select id="state">
+      
+      <option id="state-option">استان</option>
+      <option>تهران</option>
+    </select>
+      <!-- <label class="floating-label ">تلفن همراه</label> -->
+      <div class="forcible">*</div>
+  </div>
+  <div style="position: relative;z-index: 999;" class="fadeIn third">
+    <input type="text" id="membership-date" class="blur-membership-date" name="membership-date" >
+    <label class="floating-label-date">تاریخ عضویت</label>
+    <div class="forcible">*</div>
+ 
+</div>
+<div style="position: relative;" class="fadeIn third">
+  <input type="text" id="membership-time" class="blur-membership-time" name="membership-time"  >
+  <label class="floating-label-membership-time">مدت عضویت</label>
+  <div class="forcible">*</div>
+
+</div>
+<div style="position: relative;" class="fadeIn third">
+  <input type="text" id="membership-type" class="blur-membership-type" name="membership-type" >
+  <label class="floating-label-membership-type">نوع عضویت</label>
+  <div class="forcible">*</div>
+
+</div>
+</div>
         </div>
-            <div class="form-check">
+        <div class="container div-abilities">
+        <div class="row" dir="rtl" style="position: relative;">
+              
+         <select dir="rtl" class="abilities"  multiple>
+          
+           <option>انیمیشن ساز</option>
+           <option>بازی ساز</option>
+           <option>معمار</option>
+           <option>گرافیست</option>
+           <option>برنامه نویس</option>
+         </select>
+         <div class="floating-label-abilities">مهارت ها</div>
+         <div class="forcible-abilities">*</div>
+        </div>
+      </div>
+      <div class="row gender" dir="rtl">
+      
+             <span>جنسیت:</span>
+        <div class="gender-radios">
+          <div class="div-male">
+          <label for="male">مرد</label>
+             <input type="radio" name="gender" id="male">
+            </div>
+            <div class="div-female">
+             <label for="female">زن</label>
+             <input type="radio" name="gender" id="female">
+            </div>
+            <div class="forcible-gender">*</div>
+          </div>
+      </div>
+        <div>
+            <input type="submit" class="fadeIn fourth buttonLoc" value="ثبت">
+        </div>
+            <!-- <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                مرا به خاطر بسپار
               </label>
-            </div>
+            </div> -->
           </form>
       
           <!-- Remind Passowrd -->
-          <div id="formFooter">
-            <a class="underlineHover" href="#">رمز عبور را فراموش کرده اید؟</a>
-            
-          </div>
-
-           <!-- Remind Passowrd -->
-           <div id="formFooter">
-             هنوز عضو نشده اید؟
-            <a class="underlineHover register-link" href="#">ثبت نام کنید</a>
-            
-          </div>
+        
       
         </div>
       </div> 
@@ -154,6 +227,21 @@
 <script src="vendor\jquery\jquery-3.2.1.min.js"></script>
 <script src="vendor\bootstrap\js\popper.min.js"></script>
 <script src="vendor\bootstrap\js\bootstrap.min.js"></script>
+<script src="vendor\kamadatepicker\kamadatepicker.min.js"></script>
 <script src="vendor\bootstrap\js\popper.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/3.14.3/tagify.min.js" integrity="sha512-3hT+rZjTbv5TVm3gn27XdpNRNVYDVyvrn+cBluquJZ2LqPHcQGEVKp6IR/aUIJfu5yTyxMwdO19uiaKAWAWbdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/tagify.min.js"></script>
+<script src="vendor\select2\select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 <script src="js/login/main.js"></script>
+<script>
+  $(document).ready(function(){
+   
+  
+    $(".abilities").select2();
+  
+  })
+</script>
 </html>

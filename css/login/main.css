@@ -61,7 +61,7 @@
     /* min-height: 100%; */
     padding: 20px;
     position: relative;
-    top: 10vh;
+    top: 0vh;
   }
   
   #formContent {
@@ -136,12 +136,59 @@
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+  .select2-selection{
+    height: 6vh;
+    font-family: yekan;
+   
+  }
+  .select2-selection__choice{
+    background-color:#ffff00 !important;
+  }
   #mobile{
     direction: ltr;
     text-align: left;
     font-family:yekan;
   }
+  .abilities option{
+    background-color: green;
+  }
+  .abilities{
+    height: fit-content;
+   
+  }
+  .div-abilities{
+    margin-left: -2.5vw;
+    margin-top: 1vh;
+  }
   
+  .gender{
+    margin-top: 2vh;
+    padding-left: 1vw;
+    justify-content: center;
+    font-family: yekan;
+    font-size: 3vh;
+    position: relative;
+  }
+  .gender input[type="radio"]{
+    transform: scale(1.5);
+  }
+  .gender label{
+    position: relative;
+    top:-0.5vh;
+  }
+  .gender span{
+    position: relative;
+    top:-0.5vh;
+    font-size: 3vh;
+  }
+  .gender-radios{
+    display: flex;
+    margin-right: 2vw;
+    padding-left: 2vw;
+  }
+  .div-female{
+    margin-right: 1vw;
+  }
   input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
     /* background-color: rgba(255, 255, 34, 0.329) ; */
     opacity: 0.9 !important;
@@ -155,7 +202,7 @@
     transform: scale(0.95);
   }
   
-  input[type=text],input[type=password] {
+  input[type=text],input[type=password],select {
     direction: rtl;
     background-color: #f6f6f6;
     border: none;
@@ -179,6 +226,7 @@
   input[type=text],input[type=password]{
     font-size:0.9rem;
     margin-bottom:2vh;
+    font-family: yekan;
   }
   .buttonLoc{
     margin-top:5vh !important;
@@ -320,11 +368,70 @@
 color: red;
 
 font-size: 3vh;
-left: 1.5vw;
+left: 0.2vw;
 top: 2vh;
 position: absolute;
   
 }
+.forcible-abilities{
+  /* content:"*"; */
+color: red;
+
+font-size: 3vh;
+left: 4vw;
+top: 0.5vh;
+position: absolute;
+
+}
+.forcible-gender{
+  /* content:"*"; */
+color: red;
+
+font-size: 3vh;
+left: 11vw;
+top: -1vh;
+position: absolute;
+
+}
+.div-state{
+  margin-bottom: 2vh;
+}
+.div-state select{
+  padding: 5px 7px;
+}
+.floating-label-state{
+  position: absolute;
+  top: -3vh;
+  font-family: Yekan;
+  font-size: 3vh;
+  left: 11vw;
+  display: none;
+}
+.floating-label-date {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left:7vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+.floating-label-abilities {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 5px;
+  left:27vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+
 .floating-label {
     font-family:yekan;
     font-size: 3vh;
@@ -332,25 +439,214 @@ position: absolute;
     position: absolute;
     pointer-events: none;
     top: 9px;
-    left: 24vw;
+    left:4.5vw;
     width: fit-content;
     transition: all 0.1s ease;
     
 }
+
 input:focus ~ .floating-label {
     position: absolute;
-    top: -4vh;
+    top: -3vh;
     bottom: 0px;
-    left:24vw;
+    left:4.5vw;
     /* font-size: 11px; */
     opacity: 1;
     color: #404040;
     font-family: yekan;
      
 }
+.floating-label-password {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left:9vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-password {
+  position: absolute;
+  top: -3vh;
+  bottom: 0px;
+  left:9vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
+.floating-label-email {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left:10.5vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-email {
+  position: absolute;
+  top: -3vh;
+  bottom: 0px;
+  left:10.5vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
+.floating-label-mobile {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left:8vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-mobile {
+  position: absolute;
+  top: -3vh;
+  bottom: 0px;
+  left:8vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
+.floating-label-membership-time {
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left:7vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-membership-time{
+  position: absolute;
+  top: -3vh;
+  bottom: 0px;
+  left:7vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
+.floating-label-membership-type{
+  font-family:yekan;
+  font-size: 3vh;
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 9px;
+  left:7.5vw;
+  width: fit-content;
+  transition: all 0.1s ease;
+  
+}
+input:focus ~ .floating-label-membership-type{
+  position: absolute;
+  top: -3vh;
+  bottom: 0px;
+  left:7.5vw;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040;
+  font-family: yekan;
+   
+}
+
+
+.blurLabel-name-family{
+  top: -3vh !important;
+  bottom: 0px !important;
+  left:4.5vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+
+}
+.blurLabel-mobile{
+  top: -3vh !important;
+  bottom: 0px !important;
+  left:8vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+
+}
+.blurLabel-password{
+  top: -3vh !important;
+  bottom: 0px !important;
+  left:9vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+
+}
+.blurLabel-email{
+  top: -3vh !important;
+  bottom: 0px !important;
+  left:10.5vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+
+}
+
+.blurLabel-membership-time{
+  top: -3vh !important;
+  bottom: 0px !important;
+  left:7vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+
+}
+.blurLabel-membership-type{
+  top: -3vh !important;
+  bottom: 0px !important;
+  left:7.5vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+
+}
+.blurLabel-abilities{
+  top: -3vh !important;
+  bottom: 0px !important;
+  left:27vw !important;
+  /* font-size: 11px; */
+  opacity: 1;
+  color: #404040 !important;
+  font-family: yekan;
+}
 .login-title{
     font-family: yekan;
     font-size: 3vh;
+    margin-bottom: 2vh;
 }
 
 /* validation */
@@ -391,28 +687,95 @@ input:focus ~ .floating-label {
   }
 }
 
-  .blurLabel{
-      top: -4vh !important;
-      bottom: 0px !important;
-      left:24vw !important;
-      /* font-size: 11px; */
-      opacity: 1;
-      color: #404040 !important;
-      font-family: yekan;
+ 
+  .blurLabel-date{
+    top: -4vh !important;
+    bottom: 0px !important;
+    left:7vw !important;
+    /* font-size: 11px; */
+    opacity: 1;
+    color: #404040 !important;
+    font-family: yekan;
 
-  }
+}
 
 /*end of validation */
 
 /* responsive */
-@media(max-width:600px){
+@media(max-width:530px){
   .floating-label{
-    left:50vw;
+    left:35vw;
   }
   input:focus ~ .floating-label{
-    left:50vw;
+    left:35vw;
         top: -3vh;
   }
+  .floating-label-mobile{
+    left: 46vw;
+  }
+  input:focus ~ .floating-label-mobile{
+    left: 46vw;
+  }
+  .floating-label-email{
+left: 58.5vw;
+  }
+  input:focus ~ .floating-label-email{
+    left: 58.5vw;
+  }
+  .floating-label-date{
+   left:44vw;
+  }
+  .floating-label-password{
+    left: 52vw;
+  }
+  input:focus ~ .floating-label-password{
+    left: 52vw;
+  }
+  .floating-label-membership-time{
+   left: 44vw;
+  }
+  input:focus ~ .floating-label-membership-time{
+        left: 44vw;
+  }
+  .floating-label-membership-type{
+   left: 47vw;
+  }
+  input:focus ~ .floating-label-membership-type{
+    left: 47vw;
+  }
+  .select2-container{
+    width: 67vw !important;
+    left: -4vw;
+}
+.floating-label-abilities{
+  left: 54vw !important;
+}
+.blurLabel-name-family{
+  left: 35vw !important;
+}
+.blurLabel-mobile{
+  left: 46vw !important;
+}
+.blurLabel-email{
+  left: 58.5vw !important
+  ;
+}
+.blurLabel-membership-time{
+  left: 44vw !important;
+}
+.blurLabel-password{
+  left: 52vw !important;
+}
+.blurLabel-membership-type{
+  left: 47vw !important;
+}
+.blurLabel-date{
+  left:44vw !important;
+}
+.floating-label-state{
+  left: 58.5vw;
+}
+  
   .wrapper{
     top:17vh
 }
@@ -424,15 +787,13 @@ input:focus ~ .floating-label {
   body{
     position: relative;
   }
-  .blurLabel{
-    left: 50vw !important;
-  }
+ 
   .form-check-input {
     margin-right: -6vw;
 }
 }
 /* responsive miani */
-@media screen  and (min-width:600px) and (max-width:700px){
+@media screen  and (min-width:531px) and (max-width:700px){
   .vali{
     top:27vh;
     left:32vw;
@@ -444,11 +805,85 @@ input:focus ~ .floating-label {
     position: relative;
   }
   .floating-label{
-    left:52vw;
+    left:37vw;
   }
   input:focus ~ .floating-label{
-    left:52vw;
+    left:37vw;
   }
+  /* input:focus ~ .floating-label{
+    left:35vw;
+        top: -3vh;
+  } */
+  .floating-label-mobile{
+    left: 49vw;
+  }
+  input:focus ~ .floating-label-mobile{
+    left: 49vw;
+  }
+  .floating-label-email{
+left: 58vw;
+  }
+  input:focus ~ .floating-label-email{
+    left: 58vw;
+  }
+  .floating-label-date{
+   left:45vw;
+  }
+  .floating-label-password{
+    left: 54vw;
+  }
+  input:focus ~ .floating-label-password{
+    left: 54vw;
+  }
+  .floating-label-membership-time{
+   left: 45vw;
+  }
+  input:focus ~ .floating-label-membership-time{
+        left: 45vw;
+  }
+  .floating-label-membership-type{
+   left: 48vw;
+  }
+  input:focus ~ .floating-label-membership-type{
+    left: 48vw;
+  }
+  .select2-container{
+    width: 67vw !important;
+    left: -4vw;
+}
+.floating-label-abilities{
+  left: 54vw !important;
+}
+.blurLabel-name-family{
+  left: 37vw !important;
+}
+.blurLabel-mobile{
+  left: 49vw !important;
+}
+.blurLabel-email{
+  left: 58.5vw !important
+  ;
+}
+.blurLabel-membership-time{
+  left: 45vw !important;
+}
+.blurLabel-password{
+  left: 54vw !important;
+}
+.blurLabel-membership-type{
+  left: 48vw !important;
+}
+.blurLabel-date{
+  left:45vw !important;
+}
+.floating-label-state{
+  left: 58.5vw;
+}
+.select2-container{
+  width: 58vw !important;
+  left: -3vw;
+}
+
   input[type=text]{
     font-size: 3vh;
   }
@@ -471,16 +906,113 @@ input:focus ~ .floating-label {
     left:32vw;
   }
   .floating-label{
-    left:35vw;
+    left: 7vw;
+    font-size: 2vh;
+
   }
   input:focus ~ .floating-label{
+    left: 7vw;
+    font-size: 2vh;
+
+  }
+  /* input:focus ~ .floating-label{
     left:35vw;
+        top: -3vh;
+  } */
+  .floating-label-mobile{
+    left: 12vw;
+    font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-mobile{
+    left: 12vw;
+    font-size: 2vh;
+
+  }
+  .floating-label-email{
+left: 17vw;
+font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-email{
+    left: 17vw;
+    font-size: 2vh;
+
+  }
+  .floating-label-date{
+   left:10vw;
+   font-size: 2vh;
+
+  }
+  .floating-label-password{
+    left: 15vw;
+    font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-password{
+    left: 15vw;
+    font-size: 2vh;
+
+  }
+  .floating-label-membership-time{
+   left: 10vw;
+   font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-membership-time{
+        left: 10vw;
+        font-size: 2vh;
+
+  }
+  .floating-label-membership-type{
+   left: 11vw;
+   font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-membership-type{
+    left: 11vw;
+    font-size: 2vh;
+
+  }
+
+  .blurLabel-name-family{
+    left: 7vw !important;
+  }
+  .blurLabel-mobile{
+    left: 12vw !important;
+  }
+  .blurLabel-email{
+    left: 17vw !important
+    ;
+  }
+  .blurLabel-membership-time{
+    left: 10vw !important;
+  }
+  .blurLabel-password{
+    left: 15vw !important;
+  }
+  .blurLabel-membership-type{
+    left: 11vw !important;
+  }
+  .blurLabel-date{
+    left:10vw !important;
+  }
+  .floating-label-state{
+    left: 18vw;
+    font-size: 2vh;
+  }
+  .floating-label-abilities
+  {
+   left: 43vw;
+  }
+  .blurLabel-abilities{
+    left: 43vw !important;
   }
   input[type=text]{
-    font-size: 3vh;
+    font-size: 2vh;
   }
   input[type=password] {
-    font-size: 3vh;
+    font-size: 2vh;
 }
   .blurLabel{
     left: 35vw !important;
@@ -494,18 +1026,119 @@ input:focus ~ .floating-label {
     margin-top: 2vh;
   }
   input[type=text]{
-    font-size: 3vh;
+    font-size: 2vh;
   }
   input[type=password] {
-    font-size: 3vh;
+    font-size: 2vh;
 }
-  /* .floating-label{
-    left:26vw;
-  } */
+  
+  .floating-label{
+    left: 2vw;
+    font-size: 2vh;
+
+  }
   input:focus ~ .floating-label{
-    left:27vw;
+    left: 2vw;
+    font-size: 2vh;
+
+  }
+  /* input:focus ~ .floating-label{
+    left:35vw;
+        top: -3vh;
+  } */
+  .floating-label-mobile{
+    left: 8vw;
+    font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-mobile{
+    left: 8vw;
+    font-size: 2vh;
+
+  }
+  .floating-label-email{
+left: 13vw;
+font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-email{
+    left: 13vw;
+    font-size: 2vh;
+
+  }
+  .floating-label-date{
+   left:5vw;
+   font-size: 2vh;
+
+  }
+  .floating-label-password{
+    left: 10vw;
+    font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-password{
+    left: 10vw;
+    font-size: 2vh;
+
+  }
+  .floating-label-membership-time{
+   left: 5vw;
+   font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-membership-time{
+        left: 5vw;
+        font-size: 2vh;
+
+  }
+  .floating-label-membership-type{
+   left: 6vw;
+   font-size: 2vh;
+
+  }
+  input:focus ~ .floating-label-membership-type{
+    left: 6vw;
+    font-size: 2vh;
+
+  }
+
+  .blurLabel-name-family{
+    left: 2vw !important;
+  }
+  .blurLabel-mobile{
+    left: 8vw !important;
+  }
+  .blurLabel-email{
+    left: 13vw !important
+    ;
+  }
+  .blurLabel-membership-time{
+    left: 5vw !important;
+  }
+  .blurLabel-password{
+    left: 10vw !important;
+  }
+  .blurLabel-membership-type{
+    left: 6vw !important;
+  }
+  .blurLabel-date{
+    left:5vw !important;
+  }
+  .floating-label-state{
+    left: 12vw;
+    font-size: 2vh;
+  }
+  .floating-label-abilities
+  {
+   left: 30vw;
+  }
+  .blurLabel-abilities{
+    left: 30vw !important;
   }
   .blurLabel{
     left: 27vw;
+  }
+  .forcible-gender{
+    left: 8vw;
   }
 }
