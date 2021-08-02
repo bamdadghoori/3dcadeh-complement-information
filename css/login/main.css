@@ -154,7 +154,7 @@
   }
   .abilities{
     height: fit-content;
-   
+   height: -moz-fit-content;
   }
   .div-abilities{
     margin-left: -2.5vw;
@@ -416,6 +416,7 @@ position: absolute;
   top: 9px;
   left:7vw;
   width: fit-content;
+  width: -moz-fit-content;
   transition: all 0.1s ease;
   
 }
@@ -428,6 +429,7 @@ position: absolute;
   top: 5px;
   left:27vw;
   width: fit-content;
+  width: -moz-fit-content;
   transition: all 0.1s ease;
   
 }
@@ -441,6 +443,7 @@ position: absolute;
     top: 9px;
     left:4.5vw;
     width: fit-content;
+    width: -moz-fit-content;
     transition: all 0.1s ease;
     
 }
@@ -465,6 +468,7 @@ input:focus ~ .floating-label {
   top: 9px;
   left:9vw;
   width: fit-content;
+  width: -moz-fit-content;
   transition: all 0.1s ease;
   
 }
@@ -488,6 +492,7 @@ input:focus ~ .floating-label-password {
   top: 9px;
   left:10.5vw;
   width: fit-content;
+  width: -moz-fit-content;
   transition: all 0.1s ease;
   
 }
@@ -511,6 +516,7 @@ input:focus ~ .floating-label-email {
   top: 9px;
   left:8vw;
   width: fit-content;
+  width: -moz-fit-content;
   transition: all 0.1s ease;
   
 }
@@ -534,6 +540,7 @@ input:focus ~ .floating-label-mobile {
   top: 9px;
   left:7vw;
   width: fit-content;
+  width: -moz-fit-content;
   transition: all 0.1s ease;
   
 }
@@ -557,6 +564,7 @@ input:focus ~ .floating-label-membership-time{
   top: 9px;
   left:7.5vw;
   width: fit-content;
+  width: -moz-fit-content;
   transition: all 0.1s ease;
   
 }
@@ -635,7 +643,7 @@ input:focus ~ .floating-label-membership-type{
 
 }
 .blurLabel-abilities{
-  top: -3vh !important;
+  top: -4vh !important;
   bottom: 0px !important;
   left:27vw !important;
   /* font-size: 11px; */
@@ -659,20 +667,26 @@ input:focus ~ .floating-label-membership-type{
 
 .vali{
   left: 40vw;
-  top: 12vh;
+  top: 2vh;
 
-    position: absolute;
+    position: relative;
     display: none;
     margin-bottom: -10vh;
     font-family: yekan;
     direction: rtl;
     width: fit-content;
    height: fit-content;
+   width: -moz-fit-content;
+   height: -moz-fit-content;
 }
 .valiWhole{
   float: right;
   width: fit-content;
+  width: -moz-fit-content;
  }
+ .vali-password{
+  left:20vw !important
+}
  @media(max-width:600px) {
         
   .blurLabel{
@@ -791,6 +805,10 @@ left: 58.5vw;
   .form-check-input {
     margin-right: -6vw;
 }
+.vali-password {
+  left: 24vw !important;
+  width: 60vw;
+}
 }
 /* responsive miani */
 @media screen  and (min-width:531px) and (max-width:700px){
@@ -798,6 +816,10 @@ left: 58.5vw;
     top:27vh;
     left:32vw;
   }
+  .vali-password {
+    left: 22vw !important;
+    width: 60vw;
+}
   .wrapper{
     top:27vh;
   }
@@ -902,8 +924,12 @@ left: 58vw;
 }
 @media screen and (min-width:701px) and (max-width:992px) {
   .vali{
-    top:20vh;
+    /* top:20vh; */
     left:32vw;
+    margin-top: 6vh;
+  }
+  .vali-password{
+    left: 7vw !important;
   }
   .floating-label{
     left: 7vw;
@@ -1140,5 +1166,8 @@ font-size: 2vh;
   }
   .forcible-gender{
     left: 8vw;
+  }
+  .floating-label-abilities{
+    font-size: 2vh;
   }
 }

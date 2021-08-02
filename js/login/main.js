@@ -2,7 +2,7 @@ $(document).ready(function(){
     let options = {
 
         // placeholder: "تاریخ",
-        twodigit: false,
+        twodigit: true,
         nextButtonIcon: "images\homePage\timeir_next.png",
         previousButtonIcon: "images\homePage\timeir_prev.png",
         markToday: true,
@@ -137,28 +137,99 @@ $(document).ready(function(){
 })
 
     $('.buttonLoc').click(function(e){
-        var reMobile=/^0{1}(?:[0-9] ?){6,14}[0-9]$/;
-        var mobile=$("#mobile").val();
-        // var userName=$("#userName").val();
-        // var reName = /^([^0-9]*)$/;
-        if(!$("#mobile").val()||!$("#password").val()){
+       
+        var name=$("#name-family").val();
+
+  var password=$("#password").val();
+  var reName = /^([^0-9]*)$/;
+  var reNumber=/^[0-9]*$/;
+  var time=$("#membership-time").val();
+  var mail=$("#email").val();
+  var reMobile=/^0{1}(?:[0-9] ?){6,14}[0-9]$/;
+  var mobile=$("#mobile").val();
+  var date=$("#membership-date").val();
+ 
+  var reDate = /^\d{4}\/\d{2}\/\d{2}$/ ;
+  var reMail= /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  var rePass = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9]))|(?=.*[a-z])(?=.*[!@#\$%\^&\*])|(?=.*[A-Z])(?=.*[!@#\$%\^&\*]))(?=.{8,})");
+        if(!$("#mobile").val()||!$("#password").val()||!$("#name-family").val()||!$("#email").val()||!$("#membership-date").val()||!$("#membership-time").val()||!$("#membership-type").val()||$(".abilities").val().length==0){
             e.preventDefault();
             $(".vali").css("display","block")
-            $(".valiWhole").text("لطفا فیلد های ستاره دار را پر کنید")
+            $(".valiWhole").text("لطفاً فیلد های ستاره دار را پر کنید")
+            $("html,body").animate({scrollTop:0})
+            $(".vali").removeClass("vali-password")
         }
-        else if(reMobile.test(mobile)==false||mobile.length!=11){
+        else if ($('input[name=gender]:checked').length==0){
+            e.preventDefault();
+            $(".vali").css("display","block")
+            $(".valiWhole").text("لطفاً جنسیت را مشخص کنید")
+            $("html,body").animate({scrollTop:0})
+            $(".vali").removeClass("vali-password")
+        }
+        else if(reName.test(name)==false){
+            e.preventDefault();
+           $(".vali").css("display","block")
+           $(".valiWhole").text("نام و نام خانوادگی نمیتواند شامل عدد باشد")
+           $("html,body").animate({scrollTop:0})
+           $(".vali").removeClass("vali-password")
+        }
+        else if(reMail.test(mail)==false)
+{
+  e.preventDefault();
+  $(".vali").css("display","block")
+  $(".valiWhole").text("ایمیل وارد شده صحیح نیست")
+  $("html,body").animate({scrollTop:0})
+  $(".vali").removeClass("vali-password")
+}
+else if(reMobile.test(mobile)==false||mobile.length!=11){
+    e.preventDefault();
+    $(".vali").css("display","block")
+    $(".valiWhole").text("شماره تلفن همراه صحیح نیست")
+    $("html,body").animate({scrollTop:0})
+    $(".vali").removeClass("vali-password")
+  }
+  else if (rePass.test(password)==false){
+    e.preventDefault();
+    $(".vali").css("display","block")
+    $(".valiWhole").text("رمز عبور باید حداقل 8 حرف شامل حداقل 1 حرف بزرگ و یا 1 عدد و یا 1 کاراکتر خاص مانند !@#$%^& باشد")
+    $(".vali").addClass("vali-password")
+    $("html,body").animate({scrollTop:0})
+  }
+  else if($("#state-option").is(":selected")){
+    e.preventDefault();
+    $(".vali").css("display","block")
+    $(".valiWhole").text("لطفاً استان را مشخص کنید")
+    $("html,body").animate({scrollTop:0})
+    $(".vali").removeClass("vali-password")
+  }
+  else if(reNumber.test(time)==false){
+    e.preventDefault();
+    $(".vali").css("display","block")
+    $(".valiWhole").text("مدت عضویت باید عدد باشد")
+    $("html,body").animate({scrollTop:0})
+    $(".vali").removeClass("vali-password")
+  }
+  else if(reDate.test(date)==false){
+    e.preventDefault();
+    $(".vali").css("display","block")
+    $(".valiWhole").text("تاریخ عضویت صحیح نیست")
+    $("html,body").animate({scrollTop:0})
+    $(".vali").removeClass("vali-password")
+  }
+
+        // else if(reMobile.test(mobile)==false||mobile.length!=11){
             
-            e.preventDefault();
-            $(".vali").css("display","block")
-            $(".valiWhole").text("شماره تلفن همراه صحیح نیست")
-            $("html,body").animate({scrollTop:0})
-          }
-         else if($("#password").val().length<8){
-            e.preventDefault();
-            $(".vali").css("display","block")
-            $(".valiWhole").text("رمز عبور حداقل باید 8 رقم باشد")
-            $("html,body").animate({scrollTop:0})
-         }
+        //     e.preventDefault();
+        //     $(".vali").css("display","block")
+        //     $(".valiWhole").text("شماره تلفن همراه صحیح نیست")
+        //     $("html,body").animate({scrollTop:0})
+        //   }
+        //  else if($("#password").val().length<8){
+        //     e.preventDefault();
+        //     $(".vali").css("display","block")
+        //     $(".valiWhole").text("رمز عبور حداقل باید 8 رقم باشد")
+        //     $("html,body").animate({scrollTop:0})
+        //  }
         
 })
 })
