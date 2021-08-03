@@ -3,8 +3,8 @@ $(document).ready(function(){
 
         // placeholder: "تاریخ",
         twodigit: true,
-        nextButtonIcon: "images\homePage\timeir_next.png",
-        previousButtonIcon: "images\homePage\timeir_prev.png",
+        nextButtonIcon: "././images/complement-information/timeir_next.png",
+        previousButtonIcon: "././images/complement-information/timeir_prev.png",
         markToday: true,
         // gotoToday: true,
         forceFarsiDigits: true,
