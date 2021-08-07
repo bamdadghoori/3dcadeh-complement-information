@@ -157,10 +157,20 @@
    height: -moz-fit-content;
   }
   .div-abilities{
-    margin-left: -2.5vw;
+   margin-bottom: -1.5vh;
     margin-top: 1vh;
+    font-family: yekan;
   }
-  
+  .abilities-title{
+    margin-bottom: 2vh;
+    font-weight: bold;
+  }
+  .game-programmer{
+    margin-right: 0.4vw;
+  }
+  .programmer{
+    margin-right:0.3vw ;
+  }
   .gender{
     margin-top: 2vh;
     padding-left: 1vw;
@@ -225,7 +235,7 @@
   }
   input[type=text],input[type=password]{
     font-size:0.9rem;
-    margin-bottom:2vh;
+    margin-bottom:4vh;
     font-family: yekan;
   }
   .buttonLoc{
@@ -248,7 +258,20 @@
     font-family:yekan;
   }
   .form-check-input{
-    margin-right:-2vw;
+    margin-right:1vw;
+  }
+  .div-abilities .row{
+    /* left: -20vw; */
+  }
+  .div-abilities ul{
+    /* display: flex; */
+    list-style-type: none;
+    font-family: yekan;
+
+  }
+  .div-abilities ul li{
+    margin-right: 1vw;
+    margin-left: 1vw
   }
   /* ANIMATIONS */
   
@@ -394,7 +417,7 @@ position: absolute;
 
 }
 .div-state{
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
 }
 .div-state select{
   padding: 5px 7px;
@@ -809,6 +832,24 @@ left: 58.5vw;
   left: 24vw !important;
   width: 60vw;
 }
+.animator{
+  position: relative;
+    left: 3vw;
+}
+.programmer {
+  margin-right: unset;
+  position: relative;
+  left: 2.8vw;
+}
+.designer{
+  position: relative;
+    left: -3vw;
+}
+.architect{
+  position: relative;
+    left: -3vw;
+}
+
 }
 /* responsive miani */
 @media screen  and (min-width:531px) and (max-width:700px){
@@ -920,6 +961,27 @@ left: 58vw;
   }
   .form-check-input {
     margin-right: -3vw;
+}
+.animator{
+  position: relative;
+    left: 3vw;
+}
+.animator{
+  position: relative;
+    left: 2vw;
+}
+.programmer {
+  margin-right: unset;
+  position: relative;
+  left: 1.8vw;
+}
+.designer{
+  position: relative;
+    left: -2vw;
+}
+.architect{
+  position: relative;
+    left: -2vw;
 }
 }
 @media screen and (min-width:701px) and (max-width:992px) {
@@ -1046,6 +1108,12 @@ font-size: 2vh;
   .form-check-input {
     margin-right: -3vw;
 }
+.div-state {
+  margin-bottom: 4vh;
+}
+.div-state select {
+  padding: 10px 7px;
+}
 }
 @media screen and (min-width:993px) and (max-width:1100px){
   input[type=submit]{
@@ -1170,4 +1238,10 @@ font-size: 2vh;
   .floating-label-abilities{
     font-size: 2vh;
   }
+  .div-state {
+    margin-bottom: 4vh;
+  }
+  .div-state select {
+    padding: 13px 7px;
+}
 }
