@@ -273,6 +273,9 @@
     margin-right: 1vw;
     margin-left: 1vw
   }
+  .div-abilities input[type=radio]{
+    transform: scale(1.5);
+  }
   /* ANIMATIONS */
   
   /* Simple CSS3 Fade-in-down Animation */
@@ -832,22 +835,25 @@ left: 58.5vw;
   left: 24vw !important;
   width: 60vw;
 }
+.game-programmer {
+  margin-right: 1.8vw;
+}
 .animator{
   position: relative;
-    left: 3vw;
+    left: 2.2vw;
 }
 .programmer {
   margin-right: unset;
   position: relative;
-  left: 2.8vw;
+  left: 2vw;
 }
 .designer{
   position: relative;
-    left: -3vw;
+    left: -4vw;
 }
 .architect{
   position: relative;
-    left: -3vw;
+    left: -3.7vw;
 }
 
 }
