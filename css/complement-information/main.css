@@ -429,18 +429,18 @@ position: absolute;
   position: absolute;
   top: -3vh;
   font-family: Yekan;
-  font-size: 3vh;
+  font-size: 2.5vh;
   left: 11vw;
   display: none;
 }
 .floating-label-date {
   font-family:yekan;
-  font-size: 3vh;
+  font-size: 2.5vh;
   color: #cccccc;
   position: absolute;
   pointer-events: none;
   top: 9px;
-  left:7vw;
+  left:8vw;
   width: fit-content;
   width: -moz-fit-content;
   transition: all 0.1s ease;
@@ -462,12 +462,12 @@ position: absolute;
 
 .floating-label {
     font-family:yekan;
-    font-size: 3vh;
+    font-size: 2.5vh;
     color: #cccccc;
     position: absolute;
     pointer-events: none;
     top: 9px;
-    left:4.5vw;
+    left:5.5vw;
     width: fit-content;
     width: -moz-fit-content;
     transition: all 0.1s ease;
@@ -478,7 +478,7 @@ input:focus ~ .floating-label {
     position: absolute;
     top: -3vh;
     bottom: 0px;
-    left:4.5vw;
+    left:5.5vw;
     /* font-size: 11px; */
     opacity: 1;
     color: #404040;
@@ -487,7 +487,7 @@ input:focus ~ .floating-label {
 }
 .floating-label-password {
   font-family:yekan;
-  font-size: 3vh;
+  font-size: 2.5vh;
   color: #cccccc;
   position: absolute;
   pointer-events: none;
@@ -511,7 +511,7 @@ input:focus ~ .floating-label-password {
 }
 .floating-label-email {
   font-family:yekan;
-  font-size: 3vh;
+  font-size: 2.5vh;
   color: #cccccc;
   position: absolute;
   pointer-events: none;
@@ -535,7 +535,7 @@ input:focus ~ .floating-label-email {
 }
 .floating-label-mobile {
   font-family:yekan;
-  font-size: 3vh;
+  font-size: 2.5vh;
   color: #cccccc;
   position: absolute;
   pointer-events: none;
@@ -548,7 +548,7 @@ input:focus ~ .floating-label-email {
 }
 input:focus ~ .floating-label-mobile {
   position: absolute;
-  top: -3vh;
+  top: 2.5vh;
   bottom: 0px;
   left:8vw;
   /* font-size: 11px; */
@@ -559,12 +559,12 @@ input:focus ~ .floating-label-mobile {
 }
 .floating-label-membership-time {
   font-family:yekan;
-  font-size: 3vh;
+  font-size: 2.5vh;
   color: #cccccc;
   position: absolute;
   pointer-events: none;
   top: 9px;
-  left:7vw;
+  left:8vw;
   width: fit-content;
   width: -moz-fit-content;
   transition: all 0.1s ease;
@@ -574,7 +574,7 @@ input:focus ~ .floating-label-membership-time{
   position: absolute;
   top: -3vh;
   bottom: 0px;
-  left:7vw;
+  left:8vw;
   /* font-size: 11px; */
   opacity: 1;
   color: #404040;
@@ -583,12 +583,12 @@ input:focus ~ .floating-label-membership-time{
 }
 .floating-label-membership-type{
   font-family:yekan;
-  font-size: 3vh;
+  font-size: 2.5vh;
   color: #cccccc;
   position: absolute;
   pointer-events: none;
   top: 9px;
-  left:7.5vw;
+  left:8.5vw;
   width: fit-content;
   width: -moz-fit-content;
   transition: all 0.1s ease;
@@ -598,7 +598,7 @@ input:focus ~ .floating-label-membership-type{
   position: absolute;
   top: -3vh;
   bottom: 0px;
-  left:7.5vw;
+  left:8.5vw;
   /* font-size: 11px; */
   opacity: 1;
   color: #404040;
@@ -610,7 +610,7 @@ input:focus ~ .floating-label-membership-type{
 .blurLabel-name-family{
   top: -3vh !important;
   bottom: 0px !important;
-  left:4.5vw !important;
+  left:5.5vw !important;
   /* font-size: 11px; */
   opacity: 1;
   color: #404040 !important;
@@ -651,7 +651,7 @@ input:focus ~ .floating-label-membership-type{
 .blurLabel-membership-time{
   top: -3vh !important;
   bottom: 0px !important;
-  left:7vw !important;
+  left:8vw !important;
   /* font-size: 11px; */
   opacity: 1;
   color: #404040 !important;
@@ -661,7 +661,7 @@ input:focus ~ .floating-label-membership-type{
 .blurLabel-membership-type{
   top: -3vh !important;
   bottom: 0px !important;
-  left:7.5vw !important;
+  left:8.5vw !important;
   /* font-size: 11px; */
   opacity: 1;
   color: #404040 !important;
@@ -731,7 +731,7 @@ input:focus ~ .floating-label-membership-type{
   .blurLabel-date{
     top: -4vh !important;
     bottom: 0px !important;
-    left:7vw !important;
+    left:8vw !important;
     /* font-size: 11px; */
     opacity: 1;
     color: #404040 !important;
@@ -744,23 +744,23 @@ input:focus ~ .floating-label-membership-type{
 /* responsive */
 @media(max-width:530px){
   .floating-label{
-    left:35vw;
+    left:37vw;
   }
   input:focus ~ .floating-label{
-    left:35vw;
+    left:37vw;
         top: -3vh;
   }
   .floating-label-mobile{
-    left: 46vw;
+    left: 48vw;
   }
   input:focus ~ .floating-label-mobile{
-    left: 46vw;
+    left: 48vw;
   }
   .floating-label-email{
-left: 58.5vw;
+left: 56.5vw;
   }
   input:focus ~ .floating-label-email{
-    left: 58.5vw;
+    left: 56.5vw;
   }
   .floating-label-date{
    left:44vw;
@@ -791,13 +791,13 @@ left: 58.5vw;
   left: 54vw !important;
 }
 .blurLabel-name-family{
-  left: 35vw !important;
+  left: 37vw !important;
 }
 .blurLabel-mobile{
-  left: 46vw !important;
+  left: 48vw !important;
 }
 .blurLabel-email{
-  left: 58.5vw !important
+  left: 56.5vw !important
   ;
 }
 .blurLabel-membership-time{
